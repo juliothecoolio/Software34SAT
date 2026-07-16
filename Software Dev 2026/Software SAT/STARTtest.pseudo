@@ -1,0 +1,16 @@
+START
+    INPUT task_duedate
+    INPUT current_time
+    IF current_time == 00:00 THEN
+        IF task_duedate <= 3 THEN
+            DO frm_approaching_deadline
+            PRINT "The deadline for your task, " + task_title + ", is fast approaching!"                               // heading text
+            PRINT "Your task is due in " + task_duedate - current_time + " [days/hours/minutes]!"                      // subheading text
+            PRINT "Your task, " + task_title + ", has been highlighted in red to indicate the approaching deadline."   // smaller text
+            If btn.dismiss == true THEN
+                frm_approaching_deadline.close
+                DO alert_highlight_task
+            ENDIF
+        ENDIF
+    ENDIF
+END

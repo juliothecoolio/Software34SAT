@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bookstore>
+  <book category="Coming of age">
+    <title country="USA">Little Women</title>
+    <author>Louisa May Alcott</author>
+    <year>1868</year>
+    <price>14.88</price>
+  </book>
+  <book category="Coming of age">
+    <title country="USA">The Catcher in the Rye</title>
+    <author>J.D. Salinger</author>
+    <year>1951</year>
+    <price>9.29</price>
+  </book>
+  <book category="Allegorical Fiction">
+    <title country="England">Lord of the Flies</title>
+    <author>William Golding</author>
+    <year>1954</year>
+    <price>10.23</price>
+  </book>
+  <book category="Young Adult">
+    <title country="USA">The Princess Diaries</title>
+    <author>Meg Cabot</author>
+    <year>2000</year>
+    <price>12.22</price>
+  </book>
+  <book category="Science Fiction">
+    <title country="USA">The Hunger Games</title>
+    <author>Suzanne Collins</author>
+    <year>2008</year>
+    <price>13.94</price>
+  </book>
+</bookstore>
