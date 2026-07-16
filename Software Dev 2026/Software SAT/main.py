@@ -1,3 +1,4 @@
+# by julian: 2026
 import sys
 import os
 from PyQt6 import QtWidgets, uic
