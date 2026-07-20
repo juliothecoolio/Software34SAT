@@ -14,7 +14,6 @@ win3 = uic.loadUi(info_file)
 # functions
 
 
-
 def go_button_clicked():
     win2.show()
 
@@ -33,6 +32,7 @@ def win2_add_task_button_clicked():
 
  
 #make a dictionary of the entered details in add task
+# do that by making a copy of taskmanager.ui, then making the changing to the xml, extract the details from there and make the dictionary
 #make the ui look nice
 
 # Connect Buttons
