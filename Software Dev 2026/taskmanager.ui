@@ -24,7 +24,7 @@
   </property>
   <property name="styleSheet">
    <string notr="true">#MainWindow {
-    background-color: rgb(206, 206, 206);
+    background-color: rgb(180, 223, 255)
 }
 </string>
   </property>

@@ -10,8 +10,18 @@
     <height>600</height>
    </rect>
   </property>
+  <property name="font">
+   <font>
+    <family>.AppleSystemUIFont</family>
+   </font>
+  </property>
   <property name="windowTitle">
    <string>Dialog</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">#addTask {
+    background-color: rgb(180, 223, 255)
+}</string>
   </property>
   <widget class="QPushButton" name="pushButtonAdd">
    <property name="geometry">
@@ -43,9 +53,9 @@
    <property name="geometry">
     <rect>
      <x>0</x>
-     <y>-10</y>
+     <y>10</y>
      <width>801</width>
-     <height>91</height>
+     <height>51</height>
     </rect>
    </property>
    <property name="font">
@@ -60,7 +70,7 @@
 }</string>
    </property>
    <property name="text">
-    <string>Add Task</string>
+    <string>C R E A T E   N E W   T A S K</string>
    </property>
    <property name="alignment">
     <set>Qt::AlignmentFlag::AlignCenter</set>
@@ -69,10 +79,10 @@
   <widget class="QComboBox" name="comboBox">
    <property name="geometry">
     <rect>
-     <x>60</x>
-     <y>140</y>
-     <width>231</width>
-     <height>31</height>
+     <x>30</x>
+     <y>270</y>
+     <width>341</width>
+     <height>51</height>
     </rect>
    </property>
    <property name="sizeIncrement">
@@ -83,8 +93,24 @@
    </property>
    <property name="font">
     <font>
+     <family>.AppleSystemUIFont</family>
      <pointsize>15</pointsize>
     </font>
+   </property>
+   <property name="sizeAdjustPolicy">
+    <enum>QComboBox::SizeAdjustPolicy::AdjustToContentsOnFirstShow</enum>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>16</width>
+     <height>16</height>
+    </size>
+   </property>
+   <property name="placeholderText">
+    <string/>
+   </property>
+   <property name="frame">
+    <bool>true</bool>
    </property>
    <item>
     <property name="text">
@@ -125,32 +151,194 @@
   <widget class="QLineEdit" name="lineEdit">
    <property name="geometry">
     <rect>
-     <x>60</x>
-     <y>80</y>
-     <width>221</width>
+     <x>30</x>
+     <y>160</y>
+     <width>341</width>
      <height>31</height>
     </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>.AppleSystemUIFont</family>
+     <pointsize>15</pointsize>
+    </font>
    </property>
    <property name="text">
     <string/>
    </property>
    <property name="placeholderText">
-    <string>Enter Task Name...</string>
+    <string>Enter Task Title...</string>
    </property>
   </widget>
   <widget class="QLabel" name="label_3">
    <property name="geometry">
     <rect>
-     <x>390</x>
-     <y>230</y>
-     <width>291</width>
+     <x>30</x>
+     <y>110</y>
+     <width>171</width>
      <height>51</height>
     </rect>
    </property>
    <property name="font">
     <font>
      <family>Futura</family>
-     <pointsize>37</pointsize>
+     <pointsize>30</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">#label_3 {
+    color: rgb(0, 0, 0);
+}</string>
+   </property>
+   <property name="text">
+    <string>Title</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignmentFlag::AlignLeading|Qt::AlignmentFlag::AlignLeft|Qt::AlignmentFlag::AlignVCenter</set>
+   </property>
+  </widget>
+  <widget class="QCalendarWidget" name="calendarWidget">
+   <property name="geometry">
+    <rect>
+     <x>430</x>
+     <y>210</y>
+     <width>341</width>
+     <height>211</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QTimeEdit" name="timeEdit">
+   <property name="geometry">
+    <rect>
+     <x>430</x>
+     <y>160</y>
+     <width>341</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>.AppleSystemUIFont</family>
+     <pointsize>15</pointsize>
+    </font>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_4">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>230</y>
+     <width>251</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Futura</family>
+     <pointsize>30</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">#label_4 {
+    color: rgb(0, 0, 0);
+}</string>
+   </property>
+   <property name="text">
+    <string>Difficulty</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignmentFlag::AlignLeading|Qt::AlignmentFlag::AlignLeft|Qt::AlignmentFlag::AlignVCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_5">
+   <property name="geometry">
+    <rect>
+     <x>430</x>
+     <y>100</y>
+     <width>171</width>
+     <height>61</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Futura</family>
+     <pointsize>30</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">#label_5 {
+    color: rgb(0, 0, 0);
+}</string>
+   </property>
+   <property name="text">
+    <string>Due Date</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignmentFlag::AlignLeading|Qt::AlignmentFlag::AlignLeft|Qt::AlignmentFlag::AlignVCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_6">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>340</y>
+     <width>371</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Futura</family>
+     <pointsize>30</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">#label_6 {
+    color: rgb(0, 0, 0);
+}</string>
+   </property>
+   <property name="text">
+    <string>Estimated Completion Time</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignmentFlag::AlignLeading|Qt::AlignmentFlag::AlignLeft|Qt::AlignmentFlag::AlignVCenter</set>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="lineEdit_2">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>390</y>
+     <width>101</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>.AppleSystemUIFont</family>
+     <pointsize>15</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="placeholderText">
+    <string>Enter hour(s)</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_7">
+   <property name="geometry">
+    <rect>
+     <x>140</x>
+     <y>390</y>
+     <width>101</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>.AppleSystemUIFont</family>
+     <pointsize>15</pointsize>
     </font>
    </property>
    <property name="styleSheet">
@@ -159,30 +347,10 @@
 }</string>
    </property>
    <property name="text">
-    <string>Due Date </string>
+    <string>hour(s)</string>
    </property>
    <property name="alignment">
-    <set>Qt::AlignmentFlag::AlignCenter</set>
-   </property>
-  </widget>
-  <widget class="QCalendarWidget" name="calendarWidget">
-   <property name="geometry">
-    <rect>
-     <x>40</x>
-     <y>220</y>
-     <width>304</width>
-     <height>173</height>
-    </rect>
-   </property>
-  </widget>
-  <widget class="QTimeEdit" name="timeEdit">
-   <property name="geometry">
-    <rect>
-     <x>50</x>
-     <y>410</y>
-     <width>291</width>
-     <height>31</height>
-    </rect>
+    <set>Qt::AlignmentFlag::AlignLeading|Qt::AlignmentFlag::AlignLeft|Qt::AlignmentFlag::AlignVCenter</set>
    </property>
   </widget>
  </widget>
